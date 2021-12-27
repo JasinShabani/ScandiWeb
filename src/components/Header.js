@@ -55,6 +55,7 @@ const ListItem = styled("li")`
 
 function Header(){
     const [cartItems, setCartItems] = useState([]);
+    const [cartItemsLength, setCartItemsLength] = useState(null);
     const [isShown, setIsShown] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
@@ -81,9 +82,18 @@ function Header(){
      
       useComponentDidUpdate(() => {
         // saveToLocal();
-        console.log('DidUpdate hEADER')
+        // console.log('DidUpdate hEADER')
+        const localsaveCart = localStorage.getItem('saveCart');
+          if (localsaveCart) {
+            setCartItems(JSON.parse(localsaveCart));
+          }
+        const localsaveCurrency = localStorage.getItem('saveCurrency');
+          if (localsaveCurrency) {
+            setSelectedOption(JSON.parse(localsaveCurrency));
+          }
+          setCartItemsLength(cartItems.length)
       });
-    
+      
       useComponentDidUpdate(() => {
         saveToLocal();
       }, [selectedOption]);
@@ -95,6 +105,7 @@ function Header(){
       const saveToLocal = () => {
         const local = selectedOption;
         localStorage.setItem('saveCurrency', JSON.stringify(local));
+        setCartItemsLength(cartItems.length)
     }
     const onOptionClicked = value => () => {
         setSelectedOption(value);
@@ -119,6 +130,7 @@ function Header(){
                 to={{pathname:'/basket'}}>
                     <li className='nav-link-right bask'>
                         <img src={logoBasket} alt="Basket" />
+                        <span>{cartItemsLength}</span>
                         </li>
                 </Link>
                 <DropDownContainer>
