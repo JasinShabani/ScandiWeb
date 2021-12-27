@@ -16,7 +16,11 @@
 - In basket customer can increase or decrease the quantity of the products that are in basket
 - Total price counts the all of the products totals
 
-
+# To start the project
+I have also another repository in my repos called "scandiweb-"
+You need to download that project there is an folder called "junior-react-endpoint"
+first run that project "yarn start" to start the like server of the apollo
+after that come and start this project here "npm start" and its enaugh.
 
 # Getting Started with Create React App
 
