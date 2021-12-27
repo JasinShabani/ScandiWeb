@@ -1,3 +1,23 @@
+# Tasks that I completed.
+- I used functional components
+- There are 3 categories ( All, Clothes, Tech) -> These categories come automatically from apollo
+- I used also React Router.
+- Components are under src folder
+- Created seperate components for every work.
+- If inStock of data come "inStock:false" than it writes OUT OF STOCK above the product images
+- Customers can change the products when they are in specific products (Image Gallery).
+- If product has attributes than they can see the add button from category pages but when they click it will redirect you to that product page for choosing the attributes
+- If product has not any attributes than they can add that product directly from category pages by clicking the add to cart
+- I created also the overlay for cart when you come to basket icon than it shows up you the overlay of basket
+- If you want to go to basket than you need just to click to basket icon 
+- There is currencies also i created them via useState for getting the currency and to implement for all the pages 
+- In products if they have color attributes than that attributes shows up like a COLOR not a text
+- In product page the descriptions shows up like text not like html codes
+- In basket customer can increase or decrease the quantity of the products that are in basket
+- Total price counts the all of the products totals
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
